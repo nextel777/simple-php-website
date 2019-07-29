@@ -1,4 +1,9 @@
-<form action="/core/registration.php" method="post">
+<?php
+include_once 'core/registration.php';
+?>
+
+
+<form action="" method="post">
 
     <h3>REGISTRATION</h3>
 

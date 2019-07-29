@@ -1,10 +1,6 @@
 <?php
 session_start();
 
-
-
-
-
 if(!isset($_SESSION["user"]))
 {
     $host  = $_SERVER['HTTP_HOST'];

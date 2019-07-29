@@ -10,20 +10,18 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
     $age = $_POST['age'];
     $regdate = date('Y-m-d H:i:s');
 
-    if(mysqli_query($link, "INSERT INTO users(username,email,password, age, registered) " .
+    if($link->query("INSERT INTO users(username,email,password, age, registered) " .
         "VALUES('".$username."','".$email."','".md5($password)."','".$age."','".$regdate."')")){
 
         $msg = 'Congratulation you have successfully registered.';
 	header( "refresh:5;url=/login.php" );
-        mysqli_close($link);
 
     }else
     {
         $msg = 'Error while registering you...';
-        mysqli_close($link);
     }
     echo $msg;
 
-}else{
-    exit('Error, please recheck all inputs');
 }
+
+//TODO: validation forms...

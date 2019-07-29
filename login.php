@@ -1,4 +1,8 @@
 <?php
+
+include_once 'core/login.php';
+
+
 if (isset($_SESSION['username'])){
     $host  = $_SERVER['HTTP_HOST'];
     $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
@@ -14,7 +18,7 @@ if (isset($_SESSION['username'])){
 
 ?>
 
-<form action="/core/login.php" method="post">
+<form action="" method="post">
     <h1>LOGIN</h1>
     <label for="">
        login <input type="text" name="login">
