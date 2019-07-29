@@ -6,12 +6,12 @@ if (isset($_SESSION['username'])){
     header('Location: /index.php');
 }else{
         if(isset($_POST['entry'])){
-            $email = mysqli_escape_string($link, $_POST['login']);
-            $password = mysqli_escape_string($link, $_POST['password']);
+            $email = $link->real_escape_string($_POST['login']);
+            $password = $link->real_escape_string($_POST['password']);
 
 
 
-            $sql = $link->query("SELECT * FROM users WHERE email='maxi.offf@gmail.com'");
+            $sql = $link->query("SELECT * FROM users WHERE email='$email'");
             $row = $sql->fetch_array();
 
 
