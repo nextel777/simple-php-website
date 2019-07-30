@@ -22,12 +22,10 @@ if (isset($_SESSION['username'])){
     <h1>LOGIN</h1>
     <label for="">
        login <input type="text" name="login">
-        <span class = "error">* <?php if(isset($email_err) ){ echo $email_err;  }
-            ?></span>
+        <span>* <?php if(isset($email_err) ){ echo $email_err;  }?></span>
         <br>
        password <input type="password" name="password" placeholder="password">
-        <span class = "error">* <?php if(isset($pass_err) ){ echo $pass_err;  }
-            ?></span>
+        <span>* <?php if(isset($pass_err) ){ echo $pass_err;  }?></span>
     </label>
     <br>
     <button type="submit" name="entry">login</button>
