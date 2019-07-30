@@ -4,8 +4,8 @@ include_once 'core/func.php';
 
 if(!isset($_SESSION["user"]))
 {
-   echo 'hacking attempt';
-    exit;
+   die ("hacking attempt");
+
 }
 ?>
 
@@ -21,5 +21,11 @@ age <?php echo  $age ?>
 date reg <?php echo $date_reg ?>
 
 <br>
+<br>
 
+<a href="feed.php">news</a>
+<br>
+<a href="newpost.php">create a new post</a>
+<br>
 <a href="logout.php">LOGOUT</a>
+
