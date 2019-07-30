@@ -1,6 +1,6 @@
 <?php
 require_once 'library/mysqli.php';
-require_once 'formValidation.php';
+require_once 'FormValidation.php';
 
 $validation = new formValidation();
 

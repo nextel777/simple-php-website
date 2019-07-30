@@ -1,7 +1,7 @@
 <?php
 
 require_once 'library/mysqli.php';
-include_once 'core/formValidation.php';
+include_once 'core/FormValidation.php';
 
 $validation = new formValidation();
 
@@ -13,6 +13,8 @@ if (isset($_SESSION['username'])){
             $email = $link->real_escape_string($_POST['login']);
 
             $resultEmail = $validation->email($email);
+
+
             if ($resultEmail == 0){
                 $email_err ='email not valid';
             }
