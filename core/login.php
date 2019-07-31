@@ -3,6 +3,8 @@
 require_once 'library/mysqli.php';
 include_once 'core/FormValidation.php';
 
+session_start();
+
 $validation = new formValidation();
 
 if (isset($_SESSION['username'])){
@@ -26,7 +28,6 @@ if (isset($_SESSION['username'])){
             if ($resultPassword == 0){
                 $pass_err = 'is not valid';
             }
-
 
 
 

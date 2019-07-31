@@ -10,4 +10,3 @@ if ($link->connect_errno) {
 
 //echo 'mysqli connected';
 
-

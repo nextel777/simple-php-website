@@ -25,7 +25,7 @@ date reg <?php echo $date_reg ?>
 
 <a href="feed.php">news</a>
 <br>
-<a href="newpost.php">create a new post</a>
+<a href="post/add.php">create a new post</a>
 <br>
 <a href="logout.php">LOGOUT</a>
 

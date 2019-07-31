@@ -4,6 +4,14 @@ require_once 'FormValidation.php';
 
 $validation = new formValidation();
 
+session_start();
+if (isset($_SESSION['username'])){
+    header('Location: /index.php');
+}else{
+
+
+
+
 if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['age']) ) {
 
 
@@ -53,5 +61,6 @@ if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['passwor
 
 }
 
+}
 
 
