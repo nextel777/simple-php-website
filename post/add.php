@@ -4,9 +4,14 @@ include_once '../core/Feed.php';
 
 $feed = new Feed();
 
-if(isset($_POST['title']) && isset($_POST['description'])){
-    $feed->createPost();
- }
+if(isset($_POST['sumbit'])){
+    if (!empty($title) && isset($_POST['description']) ){
+        echo 'form is empty';
+    }else{
+            $feed->createPost();
+        }
+    }
+
 
 
 ?>
@@ -15,7 +20,7 @@ if(isset($_POST['title']) && isset($_POST['description'])){
 
     <h1>Create post:</h1>
 
-    <label for="">Title <input type="text" name="title"></label>
+    <label for="">Title <input type="text" name="title" required></label>
     <br>
     <br>
 
@@ -23,7 +28,7 @@ if(isset($_POST['title']) && isset($_POST['description'])){
     <br>
     <br>
 
-    <button type="submit">create post</button>
+    <button type="submit" name="sumbit">create post</button>
 
 
 </form>

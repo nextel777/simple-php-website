@@ -8,7 +8,10 @@ $feed = new Feed();
 $id = $_GET['id'];
 
 $feed->getPost($id);
-//$post_data =$feed->getPost($id);
+if (isset($_SESSION['success'])){
+    echo $_SESSION['success'];
+    unset($_SESSION['success']);
+}
 
 if(isset($_POST['title']) && isset($_POST['description'])){
     $feed->editPost($id);

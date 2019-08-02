@@ -1,12 +1,15 @@
 <?php
 
+
+
 include_once 'core/func.php';
 
 if(!isset($_SESSION["user"]))
 {
-   die ("hacking attempt");
+    die ("hacking attempt");
 
 }
+
 ?>
 
 

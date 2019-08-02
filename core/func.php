@@ -1,6 +1,5 @@
 <?php
-session_start();
-
+include_once 'UserSession.php';
 require_once 'library/mysqli.php';
 
 if (isset($_SESSION['username'])){

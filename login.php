@@ -2,7 +2,6 @@
 
 include_once 'core/login.php';
 
-
 if (isset($_SESSION['username'])){
     $host  = $_SERVER['HTTP_HOST'];
     $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
@@ -10,11 +9,6 @@ if (isset($_SESSION['username'])){
     header("Location: http://$host$uri/$extra");
     exit;
 }
-
-
-
-
-
 
 ?>
 
